@@ -3,7 +3,7 @@ PShape giant;
 void setup() {
   fullScreen(P3D); 
   background(0);
-  thor = loadShape("Thor.obj");
+  thor = loadShape("thor.obj");
   giant =loadShape("giant.obj");
   giant.setFill(color(#FF4141));
   thor.setFill(color(255));
@@ -17,6 +17,6 @@ void setup() {
 void draw() {
   background(0);
   lights();
- shape(giant,width/2+300,height/2+200);
+  shape(giant,width/2+300,height/2+200);
   shape(thor, mouseX, mouseY + 100);
 }
