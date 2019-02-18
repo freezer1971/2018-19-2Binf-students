@@ -1,17 +1,28 @@
-PImage casa;
-float xCasa, yCasa;
-PImage capra;
-float xCapra, yCapra;
-PImage lupo;
-float xLupo, yLupo;
-PImage capretto1, capretto2, capretto3;
+Personaggio capra, lupo;
+Personaggio[] capretto = new Personaggio[3];
 
-PImage erba, strada;
+Oggetto casa, erba, strada;
 
-void setup(){
+void setup() {
   fullScreen();
+  imageMode(CENTER);
 }
 
-void draw(){
+void draw() {
+  background(0);
+}
 
+class Personaggio {
+  PImage image;
+  int x, y, step;
+
+  Personaggio(PImage image, int x, int y) {
+    this.image = image;
+    this.x = x;
+    this.y = y;
+  }
+
+  void display() {
+    image(image, x, y);
+  }
 }
