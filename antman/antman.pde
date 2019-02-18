@@ -5,7 +5,7 @@ int wasp;
 void setup() {
 
   fullScreen();
-  antman=100;
+  antman=100; // posizione x di partenza
   wasp=-150;
 }
 void draw() {
